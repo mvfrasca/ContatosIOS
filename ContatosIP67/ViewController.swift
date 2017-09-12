@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func pegaDadosDoFormulario(){
-        print("Botao foi clicado.")
+        print("Botão foi clicado.")
     }
 
 
