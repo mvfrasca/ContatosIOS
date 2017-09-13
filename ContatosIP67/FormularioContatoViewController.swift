@@ -10,10 +10,17 @@ import UIKit
 
 class FormularioContatoViewController: UIViewController {
 
+    var dao:ContatoDao
+    
     @IBOutlet var nome:         UITextField!
     @IBOutlet var telefone:     UITextField!
     @IBOutlet var endereco:     UITextField!
     @IBOutlet var site:         UITextField!
+    
+    required init?(coder aDecoder: NSCoder) {
+        self.dao = ContatoDao.sharedInstance()
+        super.init(coder: aDecoder)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +40,11 @@ class FormularioContatoViewController: UIViewController {
         contato.endereco = self.endereco.text!
         contato.site = self.site.text!
         
+        dao.adiciona(contato)
+        print(dao.contatos)
+        
 //        print("Nome: \(nome), Telefone: \(telefone), Endereço: \(endereco), Site: \(site)")
-        print(contato)
+//        print(contato)
     }
 
 
