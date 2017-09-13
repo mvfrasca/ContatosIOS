@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C00702551F68A1830090F71D /* Contato.m in Sources */ = {isa = PBXBuildFile; fileRef = C00702541F68A1830090F71D /* Contato.m */; };
 		C0893F451F67699500A8200A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0893F441F67699500A8200A /* AppDelegate.swift */; };
-		C0893F471F67699500A8200A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0893F461F67699500A8200A /* ViewController.swift */; };
+		C0893F471F67699500A8200A /* FormularioContatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0893F461F67699500A8200A /* FormularioContatoViewController.swift */; };
 		C0893F4A1F67699500A8200A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0893F481F67699500A8200A /* Main.storyboard */; };
 		C0893F4D1F67699600A8200A /* ContatosIP67.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C0893F4B1F67699500A8200A /* ContatosIP67.xcdatamodeld */; };
 		C0893F4F1F67699600A8200A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0893F4E1F67699600A8200A /* Assets.xcassets */; };
@@ -35,9 +36,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C00702521F68A1830090F71D /* ContatosIP67-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ContatosIP67-Bridging-Header.h"; sourceTree = "<group>"; };
+		C00702531F68A1830090F71D /* Contato.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contato.h; sourceTree = "<group>"; };
+		C00702541F68A1830090F71D /* Contato.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contato.m; sourceTree = "<group>"; };
 		C0893F411F67699500A8200A /* ContatosIP67.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContatosIP67.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0893F441F67699500A8200A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C0893F461F67699500A8200A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C0893F461F67699500A8200A /* FormularioContatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormularioContatoViewController.swift; sourceTree = "<group>"; };
 		C0893F491F67699500A8200A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C0893F4C1F67699500A8200A /* ContatosIP67.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ContatosIP67.xcdatamodel; sourceTree = "<group>"; };
 		C0893F4E1F67699600A8200A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,12 +104,15 @@
 			isa = PBXGroup;
 			children = (
 				C0893F441F67699500A8200A /* AppDelegate.swift */,
-				C0893F461F67699500A8200A /* ViewController.swift */,
+				C0893F461F67699500A8200A /* FormularioContatoViewController.swift */,
+				C00702531F68A1830090F71D /* Contato.h */,
+				C00702541F68A1830090F71D /* Contato.m */,
 				C0893F481F67699500A8200A /* Main.storyboard */,
 				C0893F4E1F67699600A8200A /* Assets.xcassets */,
 				C0893F501F67699600A8200A /* LaunchScreen.storyboard */,
 				C0893F531F67699600A8200A /* Info.plist */,
 				C0893F4B1F67699500A8200A /* ContatosIP67.xcdatamodeld */,
+				C00702521F68A1830090F71D /* ContatosIP67-Bridging-Header.h */,
 			);
 			path = ContatosIP67;
 			sourceTree = "<group>";
@@ -196,6 +203,7 @@
 				TargetAttributes = {
 					C0893F401F67699500A8200A = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					C0893F571F67699600A8200A = {
@@ -262,7 +270,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0893F471F67699500A8200A /* ViewController.swift in Sources */,
+				C00702551F68A1830090F71D /* Contato.m in Sources */,
+				C0893F471F67699500A8200A /* FormularioContatoViewController.swift in Sources */,
 				C0893F4D1F67699600A8200A /* ContatosIP67.xcdatamodeld in Sources */,
 				C0893F451F67699500A8200A /* AppDelegate.swift in Sources */,
 			);
@@ -414,10 +423,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ContatosIP67/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.caelum.ContatosIP67;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ContatosIP67/ContatosIP67-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -426,10 +438,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ContatosIP67/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.caelum.ContatosIP67;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ContatosIP67/ContatosIP67-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -507,6 +521,7 @@
 				C0893F6E1F67699600A8200A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C0893F6F1F67699600A8200A /* Build configuration list for PBXNativeTarget "ContatosIP67Tests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +530,7 @@
 				C0893F711F67699600A8200A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C0893F721F67699600A8200A /* Build configuration list for PBXNativeTarget "ContatosIP67UITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +539,7 @@
 				C0893F741F67699600A8200A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
