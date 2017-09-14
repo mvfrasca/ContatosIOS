@@ -18,6 +18,7 @@
 		C0893F521F67699600A8200A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0893F501F67699600A8200A /* LaunchScreen.storyboard */; };
 		C0893F5D1F67699600A8200A /* ContatosIP67Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0893F5C1F67699600A8200A /* ContatosIP67Tests.swift */; };
 		C0893F681F67699600A8200A /* ContatosIP67UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0893F671F67699600A8200A /* ContatosIP67UITests.swift */; };
+		C0FAB0251F6A101D0099B90D /* FormularioContatoViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FAB0241F6A101D0099B90D /* FormularioContatoViewControllerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		C0893F631F67699600A8200A /* ContatosIP67UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContatosIP67UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0893F671F67699600A8200A /* ContatosIP67UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatosIP67UITests.swift; sourceTree = "<group>"; };
 		C0893F691F67699600A8200A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0FAB0241F6A101D0099B90D /* FormularioContatoViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FormularioContatoViewControllerDelegate.swift; path = ../FormularioContatoViewControllerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			children = (
 				C0893F441F67699500A8200A /* AppDelegate.swift */,
 				C0893F461F67699500A8200A /* FormularioContatoViewController.swift */,
+				C0FAB0241F6A101D0099B90D /* FormularioContatoViewControllerDelegate.swift */,
 				C00702561F68B0470090F71D /* ContatoDao.swift */,
 				C02F76811F68BF360034A0E6 /* ListaContatosViewController.swift */,
 				C00702531F68A1830090F71D /* Contato.h */,
@@ -279,6 +282,7 @@
 				C00702551F68A1830090F71D /* Contato.m in Sources */,
 				C0893F471F67699500A8200A /* FormularioContatoViewController.swift in Sources */,
 				C00702571F68B0470090F71D /* ContatoDao.swift in Sources */,
+				C0FAB0251F6A101D0099B90D /* FormularioContatoViewControllerDelegate.swift in Sources */,
 				C02F76821F68BF360034A0E6 /* ListaContatosViewController.swift in Sources */,
 				C0893F4D1F67699600A8200A /* ContatosIP67.xcdatamodeld in Sources */,
 				C0893F451F67699500A8200A /* AppDelegate.swift in Sources */,

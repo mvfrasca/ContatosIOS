@@ -14,10 +14,6 @@ class ContatoDao: NSObject {
     static private var defaultDAO: ContatoDao!
     var contatos: Array<Contato>
     
-    func adiciona(_ contato:Contato){
-        contatos.append(contato)        
-    }
-    
     static func sharedInstance() -> ContatoDao{
         
         if defaultDAO == nil {
@@ -30,6 +26,22 @@ class ContatoDao: NSObject {
     override private init(){
         self.contatos = Array()
         super.init()
+    }
+    
+    func adiciona(_ contato:Contato){
+        contatos.append(contato)        
+    }
+    
+    func listaTodos() -> [Contato] {
+        return contatos
+    }
+    
+    func buscaContatoNaPosicao(_ posicao:Int) -> Contato {
+        return contatos[posicao]
+    }
+    
+    func remove(_ posicao:Int){
+        contatos.remove(at:posicao)
     }
     
 }

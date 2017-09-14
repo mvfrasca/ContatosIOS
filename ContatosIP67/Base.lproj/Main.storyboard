@@ -9,7 +9,7 @@
         <!--Novo Contato-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="FormularioContatoViewController" customModule="ContatosIP67" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Form-Contato" id="BYZ-38-t0r" customClass="FormularioContatoViewController" customModule="ContatosIP67" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -74,18 +74,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNS-Kf-N1t">
-                                <frame key="frameInset" minX="155" minY="230" width="65" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Adicionar"/>
-                                <connections>
-                                    <action selector="pegaDadosDoFormulario" destination="BYZ-38-t0r" eventType="touchUpInside" id="jFA-Rk-jDm"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Novo Contato" id="cjm-N4-wkx"/>
+                    <navigationItem key="navigationItem" title="Novo Contato" id="f7N-Zy-HGZ">
+                        <barButtonItem key="rightBarButtonItem" title="Adicionar" id="vaC-RT-1lH">
+                            <connections>
+                                <action selector="criaContato" destination="BYZ-38-t0r" id="bYp-K9-75G"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="endereco" destination="1or-WG-wrm" id="Y4m-Y9-ALb"/>
                         <outlet property="nome" destination="hME-Xs-Tzt" id="wfW-ZX-ERQ"/>
@@ -126,7 +124,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RJS-e6-VhC" id="ouB-Q8-Fk0">
-                                    <frame key="frameInset" width="375" height="43"/>
+                                    <frame key="frameInset" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
