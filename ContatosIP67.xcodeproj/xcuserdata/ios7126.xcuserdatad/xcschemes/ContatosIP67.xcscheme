@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C0893F401F67699500A8200A"
+               BlueprintIdentifier = "C02B1DBD1F689731009F9465"
                BuildableName = "ContatosIP67.app"
                BlueprintName = "ContatosIP67"
                ReferencedContainer = "container:ContatosIP67.xcodeproj">
@@ -28,31 +28,11 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C0893F571F67699600A8200A"
-               BuildableName = "ContatosIP67Tests.xctest"
-               BlueprintName = "ContatosIP67Tests"
-               ReferencedContainer = "container:ContatosIP67.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C0893F621F67699600A8200A"
-               BuildableName = "ContatosIP67UITests.xctest"
-               BlueprintName = "ContatosIP67UITests"
-               ReferencedContainer = "container:ContatosIP67.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C0893F401F67699500A8200A"
+            BlueprintIdentifier = "C02B1DBD1F689731009F9465"
             BuildableName = "ContatosIP67.app"
             BlueprintName = "ContatosIP67"
             ReferencedContainer = "container:ContatosIP67.xcodeproj">
@@ -75,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C0893F401F67699500A8200A"
+            BlueprintIdentifier = "C02B1DBD1F689731009F9465"
             BuildableName = "ContatosIP67.app"
             BlueprintName = "ContatosIP67"
             ReferencedContainer = "container:ContatosIP67.xcodeproj">
@@ -101,7 +81,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C0893F401F67699500A8200A"
+            BlueprintIdentifier = "C02B1DBD1F689731009F9465"
             BuildableName = "ContatosIP67.app"
             BlueprintName = "ContatosIP67"
             ReferencedContainer = "container:ContatosIP67.xcodeproj">
