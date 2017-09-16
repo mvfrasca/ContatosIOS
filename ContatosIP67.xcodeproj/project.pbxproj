@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C00C78A51F6CAEF800E6C493 /* ContatosNoMapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C78A41F6CAEF800E6C493 /* ContatosNoMapaViewController.swift */; };
 		C00CD7AE1F6B38A900B1FCD3 /* FormularioContatoViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00CD7AD1F6B38A900B1FCD3 /* FormularioContatoViewControllerDelegate.swift */; };
 		C00CD7B01F6B553700B1FCD3 /* GerenciadorDeAcoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00CD7AF1F6B553700B1FCD3 /* GerenciadorDeAcoes.swift */; };
 		C02B1DC21F689732009F9465 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02B1DC11F689732009F9465 /* AppDelegate.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C00C78A41F6CAEF800E6C493 /* ContatosNoMapaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContatosNoMapaViewController.swift; sourceTree = "<group>"; };
 		C00CD7AD1F6B38A900B1FCD3 /* FormularioContatoViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormularioContatoViewControllerDelegate.swift; sourceTree = "<group>"; };
 		C00CD7AF1F6B553700B1FCD3 /* GerenciadorDeAcoes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GerenciadorDeAcoes.swift; sourceTree = "<group>"; };
 		C02B1DBE1F689732009F9465 /* ContatosIP67.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContatosIP67.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +80,7 @@
 				C02B1DCB1F689732009F9465 /* Assets.xcassets */,
 				C02B1DCD1F689732009F9465 /* LaunchScreen.storyboard */,
 				C02B1DD01F689732009F9465 /* Info.plist */,
+				C00C78A41F6CAEF800E6C493 /* ContatosNoMapaViewController.swift */,
 				C02B1DC81F689732009F9465 /* ContatosIP67.xcdatamodeld */,
 				C02B1DD71F689F5C009F9465 /* Contato.h */,
 				C02B1DD81F689F5C009F9465 /* Contato.m */,
@@ -161,6 +164,7 @@
 			files = (
 				C02B1DD91F689F5C009F9465 /* Contato.m in Sources */,
 				C02B1DC41F689732009F9465 /* FormularioContatoViewController.swift in Sources */,
+				C00C78A51F6CAEF800E6C493 /* ContatosNoMapaViewController.swift in Sources */,
 				C00CD7B01F6B553700B1FCD3 /* GerenciadorDeAcoes.swift in Sources */,
 				C00CD7AE1F6B38A900B1FCD3 /* FormularioContatoViewControllerDelegate.swift in Sources */,
 				C06D09961F68B07D00E3C9BC /* ContatoDao.swift in Sources */,

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FormularioContatoViewController: UIViewController {
+class FormularioContatoViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     //Declaração de variáveis
     var dao:ContatoDao
@@ -24,6 +24,7 @@ class FormularioContatoViewController: UIViewController {
     @IBOutlet var telefone: UITextField!
     @IBOutlet var endereco: UITextField!
     @IBOutlet var site: UITextField!
+    @IBOutlet var imageView: UIImageView!
     
     @IBAction func criarContato(){
         self.pegaDadosFormulario()
@@ -51,6 +52,7 @@ class FormularioContatoViewController: UIViewController {
         self.contato.telefone = self.telefone.text!
         self.contato.endereco = self.endereco.text!
         self.contato.site = self.site.text!
+        self.contato.foto = self.imageView.image
         
     }
 
@@ -64,11 +66,40 @@ class FormularioContatoViewController: UIViewController {
             self.endereco.text = contato.endereco
             self.site.text = contato.site
             
+            if let foto = self.contato.foto {
+                self.imageView.image = foto
+            }
+            
             //Altera dinamicamente o botão adicionar para confirmar, caso o objeto contato esteja preenchido.
             let botaoAlterar = UIBarButtonItem(title: "Confirmar", style: .plain, target: self, action: #selector(atualizaContato))
             self.navigationItem.rightBarButtonItem = botaoAlterar
+            
         }
         
+        //Adicionar gesto de Tap à ImageView
+        let tap = UITapGestureRecognizer(target: self, action: #selector(selecionarFoto(sender:)))
+        self.imageView.addGestureRecognizer(tap)
+    }
+    
+    func selecionarFoto(sender: AnyObject) {
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            //Câmera disponível
+        } else {
+            //Câmera indisponível - utilizar biblioteca
+            let imagePicker = UIImagePickerController()
+            imagePicker.sourceType = .photoLibrary
+            imagePicker.allowsEditing = true
+            imagePicker.delegate = self
+            
+            self.present(imagePicker, animated: true, completion: nil)
+        }
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String :AnyObject]){
+        if let imagemSelecionada = info[UIImagePickerControllerEditedImage] as? UIImage {
+            self.imageView.image = imagemSelecionada
+        }
+        picker.dismiss(animated: true, completion: nil)
     }
     
     func atualizaContato(){
