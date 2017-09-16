@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import MapKit
 
 class ContatosNoMapaViewController: UIViewController {
 
+    @IBOutlet weak var mapa: MKMapView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
