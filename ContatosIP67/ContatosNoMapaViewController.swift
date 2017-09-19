@@ -13,6 +13,8 @@ class ContatosNoMapaViewController: UIViewController {
 
     @IBOutlet weak var mapa: MKMapView!
     let localtionManager = CLLocationManager()
+    var contatos: [Contato] = Array()
+    let dao:ContatoDao = ContatoDao.sharedInstance()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +23,15 @@ class ContatosNoMapaViewController: UIViewController {
         
         let botaoLocalizacao = MKUserTrackingBarButtonItem(mapView: self.mapa)
         self.navigationItem.rightBarButtonItem = botaoLocalizacao
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.contatos = dao.listaTodos()
+        self.mapa.addAnnotations(self.contatos)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.mapa.removeAnnotations(self.contatos)
     }
 
     override func didReceiveMemoryWarning() {

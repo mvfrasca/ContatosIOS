@@ -10,8 +10,12 @@
 
 @implementation Contato
 
--(NSString *)description {
-    return [NSString stringWithFormat:@"Nome: %@, Telefone: %@,Endereco: %@, Site: %@", self.nome, self.telefone, self.endereco, self.site];
-}
+    -(NSString *)description {
+        return [NSString stringWithFormat:@"Nome: %@, Telefone: %@,Endereco: %@, Site: %@", self.nome, self.telefone, self.endereco, self.site];
+    }
+
+    -(CLLocationCoordinate2D)coordinate {
+        return CLLocationCoordinate2DMake([self.latitude doubleValue], [self.longitude doubleValue]);
+    }
 
 @end
