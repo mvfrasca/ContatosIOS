@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class FormularioContatoViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
@@ -25,6 +26,9 @@ class FormularioContatoViewController: UIViewController, UINavigationControllerD
     @IBOutlet var endereco: UITextField!
     @IBOutlet var site: UITextField!
     @IBOutlet var imageView: UIImageView!
+    @IBOutlet var latitude: UITextField!
+    @IBOutlet var longitude: UITextField!
+    
     
     @IBAction func criarContato(){
         self.pegaDadosFormulario()
@@ -54,6 +58,13 @@ class FormularioContatoViewController: UIViewController, UINavigationControllerD
         self.contato.site = self.site.text!
         self.contato.foto = self.imageView.image
         
+        if let latitude = Double(self.latitude.text!) {
+            self.contato.latitude = latitude as NSNumber
+        }
+        
+        if let longitude = Double(self.longitude.text!) {
+            self.contato.longitude = longitude as NSNumber
+        }
     }
 
     //Metodo chamado toda vez que o formulario é carregado pela primeira vez
@@ -65,6 +76,8 @@ class FormularioContatoViewController: UIViewController, UINavigationControllerD
             self.telefone.text = contato.telefone
             self.endereco.text = contato.endereco
             self.site.text = contato.site
+            self.latitude.text = contato.latitude?.description
+            self.longitude.text = contato.longitude?.description
             
             if let foto = self.contato.foto {
                 self.imageView.image = foto
@@ -113,5 +126,20 @@ class FormularioContatoViewController: UIViewController, UINavigationControllerD
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func buscarCoordenadas(sender: UIButton){
+        let geocoder = CLGeocoder()
+        
+        geocoder.geocodeAddressString(self.endereco.text!) { (resultado, error) in
+            
+            if error == nil && (resultado?.count)! > 0 {
+                let placemark = resultado![0]
+                let coordenada = placemark.location!.coordinate
+                
+                self.latitude.text = coordenada.latitude.description
+                self.longitude.text = coordenada.longitude.description
+            }
+        }
     }
 }
