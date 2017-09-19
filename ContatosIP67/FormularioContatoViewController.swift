@@ -28,6 +28,7 @@ class FormularioContatoViewController: UIViewController, UINavigationControllerD
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var latitude: UITextField!
     @IBOutlet var longitude: UITextField!
+    @IBOutlet weak var loading: UIActivityIndicatorView!
     
     
     @IBAction func criarContato(){
@@ -129,6 +130,11 @@ class FormularioContatoViewController: UIViewController, UINavigationControllerD
     }
     
     @IBAction func buscarCoordenadas(sender: UIButton){
+        
+        sender.isHidden = true
+        //sender.isEnabled = false
+        self.loading.startAnimating()
+        
         let geocoder = CLGeocoder()
         
         geocoder.geocodeAddressString(self.endereco.text!) { (resultado, error) in
@@ -140,6 +146,10 @@ class FormularioContatoViewController: UIViewController, UINavigationControllerD
                 self.latitude.text = coordenada.latitude.description
                 self.longitude.text = coordenada.longitude.description
             }
+            
+            self.loading.stopAnimating()
+            sender.isHidden = false
+            //sender.isEnabled = true
         }
     }
 }
