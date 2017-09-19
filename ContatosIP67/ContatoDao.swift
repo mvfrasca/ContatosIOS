@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-class ContatoDao: NSObject {
+class ContatoDao: CoreDataUtil {
     
     override private init(){
         self.contatos = Array()
