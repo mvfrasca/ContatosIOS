@@ -70,6 +70,31 @@ class ContatosNoMapaViewController: UIViewController, MKMapViewDelegate {
         
     }
     
+    func mapView(_ mapview: MKMapView, didSelect view: MKAnnotationView) {
+        // Recupera o pino que foi selecionado
+        let pino = view.annotation
+        
+        
+        // Define os limites do zoom
+//        let frame = CGRect(x: (pino?.coordinate.latitude)!, y: (pino?.coordinate.longitude)!, width: 100.0, height: 100.0)
+//        var limiteHorizontalVertical: UILayoutPriority = UILayoutPriority()
+//        limiteHorizontalVertical.add(10)
+//        
+//        mapview.systemLayoutSizeFitting(frame, withHorizontalFittingPriority: limiteHorizontalVertical, verticalFittingPriority: limiteHorizontalVertical)
+        mapview.showAnnotations([pino!], animated: true)
+        mapview.selectAnnotation(pino!, animated: true)
+        
+        // OU
+        
+//        let span = MKCoordinateSpanMake(0.5, 0.5)
+//        // ou
+//        let span = mapview.region.span
+//        
+//        
+//        // Move o mapa
+//        let region = MKCoordinateSpanMake(<#T##latitudeDelta: CLLocationDegrees##CLLocationDegrees#>, <#T##longitudeDelta: CLLocationDegrees##CLLocationDegrees#>)
+    }
+    
 
     /*
     // MARK: - Navigation
