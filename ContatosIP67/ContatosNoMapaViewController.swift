@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class ContatosNoMapaViewController: UIViewController {
+class ContatosNoMapaViewController: UIViewController, MKMapViewDelegate {
 
     @IBOutlet weak var mapa: MKMapView!
     let localtionManager = CLLocationManager()
@@ -19,6 +19,7 @@ class ContatosNoMapaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.mapa.delegate = self
         self.localtionManager.requestWhenInUseAuthorization()
         
         let botaoLocalizacao = MKUserTrackingBarButtonItem(mapView: self.mapa)
@@ -37,6 +38,36 @@ class ContatosNoMapaViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func mapView(_ mapview: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        
+        if annotation is MKUserLocation {
+            return nil
+        }
+        
+        let identifier:String = "pino"
+        var pino:MKPinAnnotationView
+        
+        if let reusablePin = mapview.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKPinAnnotationView {
+            pino = reusablePin
+        } else {
+            pino = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+        }
+        
+        if let contato = annotation as? Contato {
+            pino.pinTintColor = UIColor.cyan
+            pino.canShowCallout = true
+            
+            let frame = CGRect(x: 0.0, y: 0.0, width: 32.0, height: 32.0)
+            let imagemContato = UIImageView(frame: frame)
+            
+            imagemContato.image = contato.foto
+            pino.leftCalloutAccessoryView = imagemContato
+        }
+        
+        return pino
+        
     }
     
 
