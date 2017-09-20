@@ -21,6 +21,7 @@
 		C02B1DD91F689F5C009F9465 /* Contato.m in Sources */ = {isa = PBXBuildFile; fileRef = C02B1DD81F689F5C009F9465 /* Contato.m */; };
 		C06D09961F68B07D00E3C9BC /* ContatoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06D09951F68B07D00E3C9BC /* ContatoDao.swift */; };
 		C06D099C1F68C08B00E3C9BC /* ListaContatosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06D099B1F68C08B00E3C9BC /* ListaContatosViewController.swift */; };
+		C0F8DCDF1F732A4C00D15121 /* TemperaturaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F8DCDE1F732A4C00D15121 /* TemperaturaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		C02B1DD81F689F5C009F9465 /* Contato.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contato.m; sourceTree = "<group>"; };
 		C06D09951F68B07D00E3C9BC /* ContatoDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContatoDao.swift; sourceTree = "<group>"; };
 		C06D099B1F68C08B00E3C9BC /* ListaContatosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListaContatosViewController.swift; sourceTree = "<group>"; };
+		C0F8DCDE1F732A4C00D15121 /* TemperaturaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperaturaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				C06D099B1F68C08B00E3C9BC /* ListaContatosViewController.swift */,
 				C00CD7AF1F6B553700B1FCD3 /* GerenciadorDeAcoes.swift */,
 				C02B1DC51F689732009F9465 /* Main.storyboard */,
+				C0F8DCDE1F732A4C00D15121 /* TemperaturaViewController.swift */,
 				C06D09951F68B07D00E3C9BC /* ContatoDao.swift */,
 				C02B1DCB1F689732009F9465 /* Assets.xcassets */,
 				C02B1DCD1F689732009F9465 /* LaunchScreen.storyboard */,
@@ -256,6 +259,7 @@
 				C06D09961F68B07D00E3C9BC /* ContatoDao.swift in Sources */,
 				C06D099C1F68C08B00E3C9BC /* ListaContatosViewController.swift in Sources */,
 				C02B1DCA1F689732009F9465 /* ContatosIP67.xcdatamodeld in Sources */,
+				C0F8DCDF1F732A4C00D15121 /* TemperaturaViewController.swift in Sources */,
 				C01FFA1B1F71D7070058A91D /* CoreDataUtil.swift in Sources */,
 				C02B1DC21F689732009F9465 /* AppDelegate.swift in Sources */,
 			);
