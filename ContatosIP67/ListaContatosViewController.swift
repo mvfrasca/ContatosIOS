@@ -142,11 +142,13 @@ class ListaContatosViewController: UITableViewController, FormularioContatoViewC
     //Função criada no delegate
     func contatoAtualizado(_ contato: Contato) {
         self.linhaDestaque = IndexPath(row: dao.buscaPosicaoDoContato(contato), section: 0)
+        ContatoDao.sharedInstance().saveContext()
         print("contato atualizado: \(contato.nome)")
     }
     //Função criada no delegate
     func contatoAdicionado(_ contato: Contato) {
         self.linhaDestaque = IndexPath(row: dao.buscaPosicaoDoContato(contato), section: 0)
+        ContatoDao.sharedInstance().saveContext()
         print("contato adicionado: \(contato.nome)")
     }
     
