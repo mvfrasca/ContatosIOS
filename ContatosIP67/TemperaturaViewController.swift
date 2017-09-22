@@ -14,6 +14,9 @@ class TemperaturaViewController: UIViewController {
     @IBOutlet weak var labelTemperaturaMaxima: UILabel!
     @IBOutlet weak var labelTemperaturaMinima: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    // MARK: Outlets para modo Size Classes
+    @IBOutlet weak var labelNomeContato: UILabel!
+    @IBOutlet weak var labelEnderecoContato: UILabel!
     var contato:Contato?
     
     let URL_BASE: String = "http://api.openweathermap.org/data/2.5/weather?APPID=f2e1a0674f1cf54fe2eba2d3c9efcd53&units=metric"
@@ -69,6 +72,13 @@ class TemperaturaViewController: UIViewController {
             }
                 
         }
+        
+        // Cria notificação para detectar mudança de orientação em tempo real
+        NotificationCenter.default.addObserver(self, selector: #selector(TemperaturaViewController.orientationChanged), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
         
     private func pegaImagem(_ icon:String){
@@ -101,5 +111,22 @@ class TemperaturaViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func orientationChanged() {
+        // Verifica ambiente (size classes)
+        // Carrega campos de contato apenas se estivermos num ambiente wR (Plus e iPads em landscape)
+        if sizeClass() == (UIUserInterfaceSizeClass.regular, UIUserInterfaceSizeClass.compact) {
+            labelNomeContato.text = contato?.nome
+            labelEnderecoContato.text = contato?.endereco
+        }
+    }
+}
 
+// Extensão para criar acessar ambiente de size class
+extension UIViewController {
+    // Extensão para retornar ambiente de size classes
+    func sizeClass() -> (UIUserInterfaceSizeClass, UIUserInterfaceSizeClass) {
+        return(traitCollection.horizontalSizeClass, traitCollection.verticalSizeClass)
+    }
+    
 }
